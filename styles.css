@@ -24,7 +24,7 @@ input,
 select,
 button,
 label {
-  /* font-family: */
+  font-family:'Courier New', Courier, monospace
 }
 
 
@@ -40,7 +40,16 @@ label {
    - hide any overflow so it never scrolls
 ──────────────────────────── */
 .sidebar {
-
+   display: flex;
+   flex-direction: column;
+   width: 220px;
+   height: 100vh;
+   background-color: pink;
+   align-items: column;
+   border: rgb(249, 206, 213);
+   padding-top: 10px;
+   padding-bottom: 10px;
+   overflow: hidden;;
 }
 
 /* Sidebar logo text
@@ -49,12 +58,14 @@ label {
    - add padding: top/sides/bottom
 */
 .sidebar-logo {
-
+   font-size: 1.4rem;
+   color: pink;
+   padding: 10px;
 }
 
 /* The "Hub" part of the logo — give it a different darker pink color */
 .sidebar-logo span {
-
+   background-color: rgb(203, 151, 160);
 }
 
 /* "MENU" label above the nav links
@@ -63,7 +74,9 @@ label {
    - padding left and bottom
 */
 .sidebar-section {
-
+   font-size: 15px;
+   padding-left: 5px;
+   padding-bottom: 5px;
 }
 
 /* Each nav link
@@ -77,22 +90,35 @@ label {
    - transparent left border (3px solid transparent) — it shows on hover/active
 */
 .nav-item {
+   display: flex;
+   justify-content: center;;
+   gap: 5px;
+   font-style: normal;
+   text-decoration: none;
+   font-size: 20px;
+   padding: 10px;
+   border-left-width: 100px;
+   border-color: pink;
 
 }
 
 /* Nav link hover state — brighter pink text, light pink background */
 .nav-item:hover {
+   background-color: lightpink;
+   color: rgb(242, 143, 159);
 
 }
 
 /* Active nav link — pink text, pink background, pink left border */
 .nav-item.active {
-
+   background-color: pink;;
+   color: rgb(255, 145, 163);
 }
 
 /* The SVG icon inside each nav link — set width and height to 18px */
 .nav-icon {
-
+   width: 18px;
+   height: 18px;
 }
 
 /* User info at the bottom of the sidebar
@@ -102,7 +128,13 @@ label {
    - flexbox, side by side, centered, with a gap
 */
 .sidebar-footer {
-
+   display: flex;
+   justify-content: center;
+   gap: 10px;
+   margin-top: auto;
+   padding: 10px;
+   border-top: 10px;
+   border-color: rgb(255, 168, 182);
 }
 
 /* The initials circle
@@ -114,21 +146,31 @@ label {
    - prevent it from shrinking
 */
 .avatar {
+   display: flex;
+   border-radius: 50%;
+   width: 36px;
+   height: 36px;
+   background-color: lightpink;
+   font-size: 15px;
+   color: rgb(83, 64, 67);
 
 }
 
 /* Wrapper for name + semester — stack them top to bottom */
 .user-info {
-
+   display: flex;
+   flex-direction: column;;
 }
 
 /* User's name — slightly larger, darker color */
 .user-name {
-
+   font-size: 20px;
 }
 
 /* Semester label — smaller, muted color */
 .user-role {
+   font-size: 15px;
+   color: rgb(165, 120, 128)
 
 }
 
@@ -141,7 +183,10 @@ label {
    - hide overflow so only the content area scrolls
 ──────────────────────────── */
 .main {
-
+   flex: 1;
+   height: 100vh;
+   flex-direction: column;
+   overflow: hidden;
 }
 
 
@@ -153,7 +198,16 @@ label {
    - flex-shrink: 0 so it never gets squished
 */
 .topbar {
+   display: flex;
+   padding: 5px;
 
+   gap: 15px;
+
+   background-color: pink;
+
+   border-bottom: 10px rgb(147, 108, 115);
+
+   flex-shrink: 0;
 }
 
 /* Dashboard title text — font size and dark color */
