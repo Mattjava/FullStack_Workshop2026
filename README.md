@@ -50,7 +50,9 @@ Your dashboard should have these four core sections:
 4. Open the folder in **VS Code**
 5. Open `index.html` with **Live Server** to preview in the browser
 
-### Option B — Clone the repository
+### Option B — Fork and Clone the repository
+1. Fork the repo on Github
+2. Clone the repo on VS Code
 ```bash
 git clone <repo-url>
 cd <repo-folder>
